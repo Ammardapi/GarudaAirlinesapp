@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -13,6 +14,10 @@ public class biodata extends AppCompatActivity {
     EditText nama, alamat, ttl, kwg, harga;
     Spinner dari, tujuan, kelas;
     Button btnpesan;
+
+    public String arraydari [] = {"Jakarta(HLP)","Denpasar(DPS)","Lombok (LOP)"};
+    public String arraytujuan [] = {"Jakarta(HLP)","Denpasar(DPS)","Lombok (LOP)"};
+    public String arraykelas [] = {"Ekonomi","Bisnis"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,13 @@ public class biodata extends AppCompatActivity {
         kelas = (Spinner) findViewById(R.id.sp_kelas);
         btnpesan = (Button) findViewById(R.id.btn_pesantiket);
 
+        ArrayAdapter adapter = new ArrayAdapter(biodata.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arraydari);
+        dari.setAdapter(adapter);
+        ArrayAdapter adaptertujuan = new ArrayAdapter(biodata.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arraytujuan);
+        tujuan.setAdapter(adaptertujuan);
+        ArrayAdapter adapterkelas = new ArrayAdapter(biodata.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,arraykelas);
+        kelas.setAdapter(adapterkelas);
+
 
         btnpesan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +49,8 @@ public class biodata extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
 
     }

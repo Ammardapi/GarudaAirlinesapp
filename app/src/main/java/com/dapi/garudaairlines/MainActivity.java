@@ -14,6 +14,9 @@ import java.text.Normalizer;
 public class MainActivity extends AppCompatActivity {
     EditText editemail, editpassword;
     Button btnmasuk;
+
+    String email = "user";
+    String password = "password";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +29,13 @@ public class MainActivity extends AppCompatActivity {
         btnmasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = "user";
-                String password = "password";
-                if (email.equals("")) {
-                    Toast.makeText(MainActivity.this, "Email Atau Password Tidak Boleh Kosong!", Toast.LENGTH_LONG).show();
-                } else if (password.equals("")){
-                    Toast.makeText(MainActivity.this, "Email Atau Password Tidak Boleh Kosong!", Toast.LENGTH_LONG).show();
-                } else {
+
+                if (editemail.getText().toString().equalsIgnoreCase(email)&&editpassword.getText().toString().equalsIgnoreCase(password)) {
                     Intent intent = new Intent(MainActivity.this, biodata.class);
                     startActivity(intent);
+
+                } else {
+                    Toast.makeText(MainActivity.this, "Email Atau Password Tidak Boleh Kosong!", Toast.LENGTH_LONG).show();
                 }
             }
         });
