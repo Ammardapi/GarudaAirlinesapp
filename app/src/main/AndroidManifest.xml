@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GarudaAirlines">
         <activity
+            android:name=".result"
+            android:exported="false" />
+        <activity
             android:name=".biodata"
             android:exported="false" />
         <activity
