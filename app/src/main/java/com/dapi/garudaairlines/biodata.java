@@ -48,6 +48,14 @@ public class biodata extends AppCompatActivity {
                 Intent intent = new Intent(biodata.this, result.class);
                 startActivity(intent);
             }
+
+        });
+
+        harga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
         });
 
 

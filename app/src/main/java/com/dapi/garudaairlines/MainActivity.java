@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Email Atau Password Tidak Boleh Kosong!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Email Atau Password Salah!", Toast.LENGTH_LONG).show();
                 }
             }
         });

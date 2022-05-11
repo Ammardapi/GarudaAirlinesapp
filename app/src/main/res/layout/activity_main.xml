@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
@@ -17,6 +17,7 @@
         android:layout_marginTop="300dp"
         android:drawableLeft="@drawable/ic_baseline_email_24"
         android:ems="10"
+        android:layout_gravity="center"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColor="@color/white"
@@ -26,7 +27,8 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_conversion_absoluteHeight="30dp"
-        tools:layout_conversion_absoluteWidth="250dp" />
+        tools:layout_conversion_absoluteWidth="250dp"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editPassword"
@@ -36,6 +38,7 @@
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:ems="10"
         android:hint="Password"
+        android:layout_gravity="center"
         android:inputType="textPassword"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +46,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editemail"
         tools:layout_conversion_absoluteHeight="30dp"
-        tools:layout_conversion_absoluteWidth="250dp" />
+        tools:layout_conversion_absoluteWidth="250dp"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btn_masuk"
@@ -51,10 +55,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="Masuk"
+        android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editPassword"
         tools:layout_conversion_absoluteHeight="50dp"
         tools:layout_conversion_absoluteWidth="100dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
